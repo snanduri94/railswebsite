@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Srikanth Nanduri</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
-    <%= link_to "Home", root_path%>
-    <%= link_to "About", about_path%>
-    <%= link_to "Games", games_path%>
+<head>
+  <title>Srikanth Nanduri</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
+  <%= stylesheet_link_tag 'main', media: 'all', 'data-turbo-track': 'reload' %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-name">
+      Srikanth Nanduri
+    </div>
+    <div class="profile">
+      <%= image_tag "profile_photo.jpeg", class: "profile-image"%>
+    </div>
+    <div class="button-container">
+      <%= link_to "Home", root_path, class: "button"%>
+      <%= link_to "About", about_path, class: "button"%>
+      <%= link_to "Games", games_path, class: "button"%>
+    </div>
     <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
