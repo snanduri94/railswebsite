@@ -10,9 +10,14 @@ body {
   }
   
   .container {
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set container's height to 100vh */
+    overflow: visible;
   }
+  
   
   .profile {
     margin-bottom: 20px; /* Add space between image and links */
@@ -41,10 +46,11 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #6E54A3; /* Change the background color to match your design */
+    background-color: rgba(224, 224, 224, 0.8); /* Change the background color to match your design */
     padding: 20px 0; /* Add padding to the top and bottom */
     margin-top: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
   }
   
   .button {
